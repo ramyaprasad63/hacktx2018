@@ -11,5 +11,9 @@ import pandas as pd
 import sys
 import re
 
-df = pd.read_excel('foodinsecurity.xlsx', sheetname = 'sheet1')
-pprint(df)
+countyhungerdf = pd.read_excel('foodinsecurity.xlsx', sheetname = 'CountyData')
+hungerdata = ParseData(countyhungerdf)
+pprint(hungerdf)
+
+def ParseData(countyhungerdf):
+    
